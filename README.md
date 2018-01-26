@@ -12,4 +12,13 @@ Algonquin College
  - list rendering
  - basic event listener
 
+**Week 2 -- Begin building a Vue Todo App**
+ - directives
+ - list rendering 
+ - form inputs
+ - v-model modifiers (.trim)
+ - dynamic class binding
+ - event listeners
+ - array manipulation
+ - conditional assignment with ternary operators
 
