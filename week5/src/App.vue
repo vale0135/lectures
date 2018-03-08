@@ -1,7 +1,12 @@
 <template>
   <div class="app">
+    <!-- We need some navigation links to switch between views -->
     <nav>
       <ul>
+        <!--
+          The RouterLink component comes with VueRouter.
+          The 'to' prop is the URL route.
+        -->
         <li><router-link to="/">All</router-link></li>
         <li><router-link to="/active">Active</router-link></li>
         <li><router-link to="/completed">Completed</router-link></li>
@@ -9,6 +14,13 @@
     </nav>
     <h1 class="title">Vue Todos</h1>
     <add-task-form @taskAdded="addTask" />
+    <!--
+      The RouterView is a placeholder that VueRouter uses to know
+      where to insert the designated component for a given URL.
+      In this case we are passing our taskList as a prop to each route's
+      component and we are listening for user events.  This way we are still
+      only mainting one master list in the App.vue component.
+     -->
     <router-view
       :tasks="taskList"
       @toggleDone="toggleDone"
@@ -31,17 +43,6 @@ export default {
         { id: 1236, title: 'Learn Vuex', isComplete: false, priority: 'medium' },
         { id: 1237, title: 'Learn Vue DevTools', isComplete: true, priority: 'medium' }
       ]
-    }
-  },
-
-  computed: {
-    completedTaskList () {
-      return this.taskList.filter(function (task) {
-        return task.isComplete
-      })
-    },
-    incompleteTaskList () {
-      return this.taskList.filter(task => !task.isComplete)
     }
   },
 
