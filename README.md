@@ -22,3 +22,16 @@ Algonquin College
  - array manipulation
  - conditional assignment with ternary operators
 
+**Week 3 -- Add more features to Vue Todo App**
+
+**Week 4 -- Recreate prototype with Vue CLI and Webpack**
+ - install vue-cli
+ - create new project with webpack template
+ - deconstruct prototype into components
+ - use computed properties to filter lists
+
+**Week 5 -- Separate list views with Vue Router**
+ - create project with webpack and vue-router
+ - add navigation
+ - add routes for filtered list views
+ 
