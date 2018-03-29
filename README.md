@@ -35,3 +35,9 @@ Algonquin College
  - add navigation
  - add routes for filtered list views
  
+**Week 6 -- Break Week**
+
+**Week 7 -- LocalStorage and List Filtering**
+ - enhance Vue Router implementation
+ - add localStorage
+ - add priority filter
