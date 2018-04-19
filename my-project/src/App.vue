@@ -30,6 +30,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import AddTaskForm from '@/components/AddTaskForm'
 
 export default {
@@ -47,7 +48,16 @@ export default {
   },
 
   created () {
-    this.taskList = JSON.parse(localStorage.getItem('taskList')) || []
+    // this.taskList = JSON.parse(localStorage.getItem('taskList')) || []
+    axios
+    // Edit the URL below!! Create a variable 
+      .get('https://mckennr.edumedia.ca/mtm6430-w18/todos/api')
+      .then(response=> {
+        this.taskList = response.data.data.length
+          ? response.data.data
+          : []
+      })
+      .catch(error=> {console.error(error) })
   },
 
   methods: {
