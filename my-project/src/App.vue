@@ -50,7 +50,7 @@ export default {
   created () {
     // this.taskList = JSON.parse(localStorage.getItem('taskList')) || []
     axios
-    // Edit the URL below!! Create a variable 
+    // Edit the URL below!! Create a variable
       .get('https://mckennr.edumedia.ca/mtm6430-w18/todos/api')
       .then(response=> {
         this.taskList = response.data.data.length
