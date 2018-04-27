@@ -32,13 +32,10 @@
 <script>
 <script>
 import moment from 'moment'
-
-export default {
-  // ...
-}
 export default {
   data () {
     return {
+      baseURL: 'https://vue-todos.robertmckenney.ca/api',
       loginName: '',
       password: '',
       errorMessage: '',
@@ -46,11 +43,6 @@ export default {
     }
   },
   methods: {
-    login () {
-      // send credentials to the OAuth2 server
-      // get back an access_token
-      // save the token
-      // redirect to the main application view
       login () {
   this.errorMessage = ''
   this.isWorking = true
@@ -65,6 +57,7 @@ export default {
       scope: '*'
     }
   )
+  // get back an access_token
   .then(response => {
     // eslint-disable-next-line
     const { expires_in, ...rest } = response.data
@@ -78,6 +71,8 @@ export default {
   })
   .catch(error => this.handleError(error))
   .finally(() => { this.isWorking = false })
+      // save the token
+      // redirect to the main application view
     },
       handleError (error) {
   if (error.response) {
@@ -103,5 +98,7 @@ export default {
     console.log('Error', error.message)
   }
   console.log(error.config)
+}
+}
 }
 </script>

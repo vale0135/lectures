@@ -15,7 +15,6 @@
 <script>
 // We will use this reusable component to minimize duplicating layout markup.
 import TaskList from '@/components/TaskList'
-
 export default {
   props: ['tasks'],
   components: { TaskList },
@@ -39,5 +38,4 @@ export default {
 </script>
 
 <style>
-
 </style>
