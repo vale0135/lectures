@@ -13,7 +13,7 @@
       <input style="width:11rem;" type="text" v-model.trim="newTask.description" @keyup.enter="addTask">
     </label>
 
-    <select style="background-color: #E74C3C; color: white;
+    <select style="background-color: #ffb300; color: black;
      border-radius: 5%; border: 1px solid #2c3e50;"
       v-model="newTask.priority">
       <option value="high">high</option>
@@ -22,7 +22,7 @@
     </select>
 
     <button
-      style="background-color: #E74C3C; color: white; border-radius: 5%; border: 1px solid #2c3e50; margin-top:1rem;"
+      style="background-color: #ffb300; color: black; border-radius: 5%; border: 1px solid #2c3e50; margin-top:1rem;"
       @click="addTask"
     >Add Task</button>
 

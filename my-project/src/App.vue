@@ -1,18 +1,18 @@
 <template>
   <div id="app">
     <!-- We need some navigation links to switch between views -->
-  <nav style="background-color: #E74C3C; border: 1px solid #2c3e50;" class="navbar navbar-inverse">
+  <nav class="navbar navbar-inverse">
     <div class="navbar-header">
-      <a style="color: white;" class="navbar-brand" href="#">Vue To-Do</a>
+      <a class="navbar-brand" href="#">Vue To-Do</a>
     </div>
       <ul class="nav navbar-nav">
         <!--
           The RouterLink component comes with VueRouter.
           The 'to' prop is the URL route.
         -->
-        <li style="color: #FDEDEC;"><router-link  to="/">All</router-link></li>
-        <li  style="color: #FDEDEC;"><router-link to="/active">Active</router-link></li>
-        <li style="color: #FDEDEC;"><router-link  to="/completed">Completed</router-link></li>
+        <li><router-link  to="/">All</router-link></li>
+        <li><router-link to="/active">Active</router-link></li>
+        <li><router-link  to="/completed">Completed</router-link></li>
       </ul>
     </nav>
 
@@ -78,25 +78,53 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Avenir Next', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* text-align: center; */
-  color: #2c3e50;
-  width: 100%;
-  max-width: 550px;
-  margin: 60px auto;
+  color: #f4a742;
+  font-size: 18px;
+  max-width: 75%;
+
+
 }
+
+div.navbar-header{
+  background-color: #ffb300;
+  padding: 10px 5px;
+  text-align: center;
+}
+
+.nav.navbar.navbar-inverse{
+    border: 1px solid #ffb300;
+}
+
+a.navbar-brand{
+    color: #000000;
+    font-size: 24px;
+    text-align: center;
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+ul.nav.navbar-nav {
+  text-decoration: none;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 nav ul {
+  background-color: #ffb300;
+
   display: flex;
   justify-content: flex-start;
 }
 nav ul li {
   margin-right: 1em;
+
 }
+
+
 </style>

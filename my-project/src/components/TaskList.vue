@@ -1,10 +1,10 @@
 <template>
   <div>
-    <h2 style="color: #2c3e50; font-size:20px;">{{listTitle}}</h2>
+    <h2 style="color: #c68400; font-size:20px;">{{listTitle}}</h2>
     <div class="toolbar">
       <label style="font-size:10px;" for="priority-filter">Show Priority</label>
-      <select style="background-color: #E74C3C; color: white; border-radius: 5%;
-       border: 1px solid #2c3e50;"
+      <select style="background-color: #ffb300; color: black; border-radius: 5%;
+       border: 1px solid #c68400;"
        name="priority-filter" id="priority-filter" v-model="selectedPriority">
         <option value="">All</option>
         <option
@@ -17,8 +17,8 @@
     <div style="margin-top:-35px; margin-left:20rem;" class="toolbar">
       <label style="font-size:10px; margin-left: -2rem;"
        for="category-filter">Show Category</label>
-      <select style="background-color: #E74C3C; color: white; border-radius: 5%;
-       border: 1px solid #2c3e50;"
+      <select style="background-color: #ffb300; color: black; border-radius: 5%;
+       border: 1px solid #c68400;"
        name="category-filter" id="category-filter" v-model="selectedCategory">
         <option value="">All</option>
         <option
@@ -33,7 +33,7 @@
       <label style="font-size:10px;"
       for="dueDate-filter">Sort By</label>
       <select
-        style="background-color: #E74C3C; color: white; border-radius: 5%; border: 1px solid #2c3e50;"
+        style="background-color: #ffb300; color: black; border-radius: 5%; border: 1px solid #c68400;"
         name="dueDate-filter"
         id="dueDate-filter"
         v-model="sortAscending">
@@ -56,8 +56,8 @@
           <div class="toolbar">
       <label for="category-filter"></label>
       <select
-       style="background-color: #E74C3C; color: white;
-        border-radius: 5%; border: 1px solid #2c3e50;
+       style="background-color: #ffb300; color: black;
+        border-radius: 5%; border: 1px solid #c68400;
          margin-top: 2rem; margin-bottom: 2rem;
           margin-left: -0.5rem; width: 10rem;"
        name="category-filter" id="category-filter"
@@ -72,8 +72,8 @@
 
 <div class="toolbar">
       <label for="priority-filter"></label>
-      <select style="background-color: #E74C3C;
-       color: white; border-radius: 5%; border: 1px solid #2c3e50;
+      <select style="background-color: #ffb300;
+       color: black; border-radius: 5%; border: 1px solid #c68400;
         margin-top: 0.5rem; margin-bottom: 2rem; margin-left: -0.5rem;
          width: 10rem;"
           name="priority-filter" id="priority-filter" v-model="editingTask.priority">
@@ -86,18 +86,18 @@
 
          <button
           style="background-color: #E74C3C;
-           color: white; border-radius: 5%;
-            border: 1px solid #2c3e50;" @click="saveEditing(task)">SAVE</button>
+           color: black; border-radius: 5%;
+            border: 1px solid #c68400;" @click="saveEditing(task)">SAVE</button>
           <button
            style="background-color: #E74C3C;
-            color: white; border-radius: 5%;
-             border: 1px solid #2c3e50;" @click="cancelEditing">Cancel</button>
+            color: black; border-radius: 5%;
+             border: 1px solid #c68400;" @click="cancelEditing">Cancel</button>
        </span>
 
-       <span style="border: 1px solid #E74C3C;
+       <span style="border: 1px solid #ffb300;
        width:55rem; height:4rem; margin-top:0.5rem;
         padding-left:2rem; padding-top:1rem;" v-else>
-        <span style="color: #E74C3C; margin-right: 3rem;"
+        <span style="color: #c68400; margin-right: 3rem;"
          class="fa"
           :class="{
             'fa fa-circle-o': ! task.isComplete,
@@ -109,9 +109,9 @@
          @click="setIsEditing(task)">{{ task.title }} </span>
         <span  style="color: #E74C3C; margin-right: 2rem; font-size:9px; text-align: center;"
         >{{ task.priority }}</span>
-        <span style="color: #979A9A; margin-right: 2rem; font-size:9px; text-align: center;">{{task.category}}</span>
-        <span style="color: #979A9A; margin-right: 2rem; font-size:9px; text-align: center;">{{task.dueDate}}</span>
-        <span style="color: #E74C3C; margin-right: 1rem; top: 0; text-align: center; "
+        <span style="color: #c68400; margin-right: 2rem; font-size:9px; text-align: center;">{{task.category}}</span>
+        <span style="color: #c68400; margin-right: 2rem; font-size:9px; text-align: center;">{{task.dueDate}}</span>
+        <span style="color: #ffb300; margin-right: 1rem; top: 0; text-align: center; "
           class="fa fa-trash" @click="removeTask(task)"></span>
         </span>
       </li>
